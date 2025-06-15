@@ -1,0 +1,61 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.neighborhood_connect"  // Keep your package name
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = "29.0.13113456"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.neighborhood_connect"
+        minSdk = 23
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug  // Use debug signing config for now
+        }
+    }
+    lintOptions {
+        disable 'Deprecated'
+        disable 'Unchecked'
+    }
+}
+
+flutter {
+    source = "../.."  // Path to your Flutter source
+}
+
+// Add Firebase services plugin to the bottom of the file
+apply plugin: 'com.google.gms.google-services'
+
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5' // Add this line
+    implementation 'com.google.firebase:firebase-auth:23.2.1'
+    implementation 'com.google.firebase:firebase-firestore:25.1.4'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:-deprecation"
+}

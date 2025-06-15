@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()  // Add Google repository for Firebase and other services
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.10.0'
+        // Make sure the Gradle plugin is up to date
+        classpath 'com.google.gms:google-services:4.9.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()  // Required for Firebase
+        mavenCentral()
+    }
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << '-Xlint:-options'
+    }
+
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

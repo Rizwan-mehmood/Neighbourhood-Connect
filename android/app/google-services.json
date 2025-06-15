@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "289604528921",
+    "firebase_url": "https://neighborhood-connect-56dc4-default-rtdb.firebaseio.com",
+    "project_id": "neighborhood-connect-56dc4",
+    "storage_bucket": "neighborhood-connect-56dc4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289604528921:android:e28d6634d7cafb20e9f388",
+        "android_client_info": {
+          "package_name": "com.example.neighborhood_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289604528921-d1ljd69ihe74atda2fm8a3jnq4rbpnle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.neighborhood_connect",
+            "certificate_hash": "5f7d842211b111568e1f45ec33e62449b5f35fac"
+          }
+        },
+        {
+          "client_id": "289604528921-ga9o4r5c82sc3nnbo6qq4nnh04sksaan.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE9qvoCCMiJMk9vh7UC9nG2zTd0VnhVfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289604528921-ga9o4r5c82sc3nnbo6qq4nnh04sksaan.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "289604528921-vjhsr9lcbmnepdc0a6hu4g0sfg0njdfv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.neighborhoodConnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
